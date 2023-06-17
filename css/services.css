@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+:root {
+    --bg-color: #10002b;
+    --main-color: #9D4EDD;
+    --second-color: #EDAAFF;
+}
+body {
+    background-color: var(--bg-color);
+    color: white;
+    margin: 0 auto;
+    background-image: url(../imgs/home/pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+/* header start */
+header .container {
+    width: 90%;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container img {
+    position: relative;
+    top: 5px;
+    height: 20px;
+}
+/* new botton  */
+header .container button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+header .container button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+header .container button:hover {
+    border-radius: 20px;
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    transition: 0.3s;
+}
+header .container button:hover a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: 0.3s;
+}
+/* new botton  */
+
+@media screen and (max-width: 280px) {
+    header .container img {
+        height: 12px;
+        top: 0;
+    }
+    header .container button {
+        width: 100px;
+        font-size: 12px;
+    }
+}
+@media (min-width: 281px) and (max-width: 360px) {
+    header .container img {
+        height: 16px;
+        top: 3px;
+    }
+    header .container button {
+        width: 120px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 769px) {
+    header .container {
+        height: 100px;
+    }
+    header .container ul {
+        display: flex;
+    }
+    header .container span#menu-icon {
+        display: none; /* this should be modified when you get start with javascript */
+    }
+}
+@media (min-width: 1200px) {
+    header .container {
+        width: 70%;
+    }
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* first section start */
+section.first .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+section.first > .container > h1 {
+    font-weight: 500;
+    padding: 50px 0 80px;
+    font-size: 5vw;
+}
+@media screen and (min-width: 769px) {
+    section.first .container p {
+        font-size: 40px;
+    }
+    section.first > .container > h1 {
+        font-size: 35px;
+    }
+}
+
+/* first section end */
+/* second section start */
+section.second .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 40px;
+    column-gap: 20px;
+}
+section.second .container .item .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+section.second .container .item .bottom h4 {
+    padding: 10px 10px 0px 10px;
+    font-weight: 500;
+}
+section.second .container .item .bottom p {
+    padding: 10px 20px 0px 20px;
+    font-weight: 200;
+}
+section.second .container .item .bottom button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--main-color);
+    font-weight: bold;
+    outline: none;
+    border: 1px solid var(--main-color);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+section.second .container .item .bottom button span {
+    padding-left: 5px;
+    display: none;
+    animation: icons 0.5s;
+}
+section.second .container .item .bottom button:hover {
+    width: 150px;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+section.second .container .item .bottom button:hover span{
+    display: block;
+}
+@keyframes icons {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes buttonText {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-10px);
+    }
+}
+@media screen and (max-width: 400px){
+    section.second .container .item .bottom p {
+        font-size: 4vw;
+    }
+    section.second .container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+@media (min-width: 1200px) {
+    section {
+        width: 70%;
+    }
+    section.second .container {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+    section {
+        width: 90%;
+    }
+    section.second .container {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+
+/* second section end */
+
+/* footer start */
+
+footer .container p {
+    text-align: center;
+    font-weight: 200;
+    color: var(--main-color);
+    padding: 50px 0;
+}
+@media screen and (max-width: 400px){
+    footer .container p {
+        font-size: 4vw;
+    }
+}
+@media (min-width: 958px) and (max-width: 1024px){
+    footer .container p {
+        padding: 250px 0 50px;
+    }
+}
+@media screen and (min-width: 1700px){
+    footer .container p {
+        padding: 150px 0 50px;
+    }
+}
+
+/* footer end */
